@@ -1,4 +1,5 @@
 #summary Functional Specification for Services API
+#labels FunctionalSpecification,ServicesAPI
 
 = Scope of the API =
 
