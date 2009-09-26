@@ -32,4 +32,4 @@ The Services API has Internal Activities and Responsibilities:
 
 == Flow Diagram ==
 
-[http://code.google.com/p/jinglenodes/source/browse/wiki/JingleNodesServiceAPI.svg http://code.google.com/p/jinglenodes/source/browse/wiki/JingleNodesServiceAPI.svg]
+[http://code.google.com/p/jinglenodes/source/browse/wiki/JingleNodesServiceAPI.svg| http://code.google.com/p/jinglenodes/source/browse/wiki/JingleNodesServiceAPI.svg]
