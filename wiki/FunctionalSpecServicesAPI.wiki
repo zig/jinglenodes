@@ -1,0 +1,16 @@
+#summary Functional Specification for Services API
+
+= Scope of the API =
+
+The services API aims to provide the relay functionality, it has the goal of providing a generic RTP Relay Library.
+That can be use in an application to provide:
+
+* Dynamic RTP Relay Channel
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
