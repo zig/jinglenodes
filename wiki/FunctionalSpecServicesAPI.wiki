@@ -29,3 +29,7 @@ Application can use the Library for the following tasks:
 
 The Services API has Internal Activities and Responsibilities:
   # Timeout, Expire and Destroy Inactive Channels (Inactivity is based on last packet received by the Channel)
+
+== Flow Diagram ==
+
+[http://code.google.com/p/jinglenodes/source/browse/wiki/JingleNodesServiceAPI.svg http://code.google.com/p/jinglenodes/source/browse/wiki/JingleNodesServiceAPI.svg]
