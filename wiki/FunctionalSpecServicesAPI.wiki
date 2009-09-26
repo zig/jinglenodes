@@ -5,18 +5,18 @@
 The services API aims to provide the relay functionality, it has the goal of providing a generic RTP Relay Library.
 That can be use in an application to provide:
 
-# Dynamic RTP/UDP Relay Channels
-# Basic Permissions Rules based on domain whitelist
+* Dynamic RTP/UDP Relay Channels
+* Basic Permissions Rules based on domain whitelist
 
 = Auto of Scope =
 
 As a Prototype Services API does NOT intend to provide:
-# Provide XMPP Connectivity, as it is meant to be generic as reusable for different XMPP Clients and Servers.
-# BlackList Permission Rules
-# RTP/TCP Transport Relay
+* Provide XMPP Connectivity, as it is meant to be generic as reusable for different XMPP Clients and Servers.
+* BlackList Permission Rules
+* RTP/TCP Transport Relay
 
 = User Interaction =
 
 Application can use the Library for the following tasks:
-# Request a Dynamic Bind Relay Channel - Dynamic as the Channel has a mechanism that does not require User/Application Interaction in order to bind the Channel both ways.
-# Request Destruction of a Channel
+* Request a Dynamic Bind Relay Channel - Dynamic as the Channel has a mechanism that does not require User/Application Interaction in order to bind the Channel both ways.
+* Request Destruction of a Channel
