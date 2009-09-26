@@ -26,3 +26,6 @@ Application can use the Library for the following tasks:
   # Select the Max Concurrent Channels per User(BareJID)
 
 == Services Activities ==
+
+The Services API has Internal Activities and Responsibilities:
+  # Timeout, Expire and Destroy Inactive Channels (Inactivity is based on last packet received by the Channel)
