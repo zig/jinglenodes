@@ -19,8 +19,9 @@ public:
 	udp::endpoint remote_endpoint_;
 	boost::array<char, 1500> recv_buffer_;
 
-	udp_channel(boost::asio::io_service& io_service) :
+	udp_channel(boost::asio::io_service& io_service, udp::endpoint r) :
 		socket_(io_service, udp::endpoint(udp::v4(), 0)) {
+		remote_endpoint_ = r;
 	}
 
 	udp::endpoint get_local_endpoint() {
@@ -74,14 +75,9 @@ public:
 			int port_a, string host_b, int port_b) {
 
 		try {
-			channel_a_ = new udp_channel(io_service);
-			channel_b_ = new udp_channel(io_service);
 
-			// Invert Preliminary Hosts
-			channel_a_->set_remote_endpoint(udp::endpoint(
-					asio::ip::address::from_string(host_b), port_b));
-			channel_b_->set_remote_endpoint(udp::endpoint(
-					asio::ip::address::from_string(host_a), port_a));
+			channel_a_ = new udp_channel(io_service,udp::endpoint(asio::ip::address::from_string(host_b), port_b));
+			channel_b_ = new udp_channel(io_service,udp::endpoint(asio::ip::address::from_string(host_a), port_a));
 
 			channel_a_->set_pair(channel_b_);
 			channel_b_->set_pair(channel_a_);
