@@ -32,4 +32,12 @@ The Services API has Internal Activities and Responsibilities:
 
 == Flow Diagram ==
 
+Basically the Services API has 2 Main Processes: 
+ # *Channel Timeout Monitor* - That monitors channels activity
+ # *Candidate Processor* - That process Candidate(Channel) Requests and allocates channels.
+
+*The Timeout Monitor* has the task of monitoring channels activity and destroy expired ones. In order to prevent that no longer used channel remains valid. This situation can happen when a client requests a node, but looses internet connectivity, making the sending of the destroy request impossible.
+
+*The Candidate Processor* process Candidate(Channel) Creation and Destroy Requests. It will allocate and destroy active channel on demand. It is also responsible for controlling whitelists, blacklists and other available security policies.
+
 [http://www.gliffy.com/pubdoc/1365278/L.jpg http://www.gliffy.com/pubdoc/1365278/M.jpg]
