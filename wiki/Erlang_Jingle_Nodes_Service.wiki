@@ -1,0 +1,37 @@
+#summary How to use erlang Jingle Nodes Service
+
+= Introduction =
+
+This Tutorial provides a step-by-step how to add Jingle Nodes Services to your XMPP Server using Jingle Nodes erlang version of the Services API
+
+= Requirements =
+
+* Latest Erlang Version Installed
+* XMPP Server with External Component Enabled (ejabberd recommended for erlang version)
+
+= Procedures =
+
+== Configuring ejabberd ==
+
+Append your ejabberd.cfg file:
+
+{{{
+  %%
+  %% ejabberd_service: Interact with external components (transports...)
+  %%
+  {8888, ejabberd_service, [
+                            {access, all},
+                            {shaper_rule, fast},
+                            {ip, {127, 0, 0, 1}},
+                            {hosts, ["jn.localhost"],
+                             [{password, "secret"}]
+                            }
+                           ]},
+}}}
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
