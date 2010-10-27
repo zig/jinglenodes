@@ -54,11 +54,11 @@ svn checkout http://jinglenodes.googlecode.com/svn/trunk/jnsapi_erlang jnsapi_er
 Extra details and SVN Source Browse: Jingle Nodes Source
 
 ===4) Building===
-
+{{{
 ~/jnsapi_erlang$ make
-
+}}}
 ===5) Configuring: jn_component.cfg===
-
+{{{
 {jid, "jn.localhost"}.
 {server, "localhost"}.
 {port, 8888}.
@@ -71,7 +71,7 @@ Extra details and SVN Source Browse: Jingle Nodes Source
 {init_port, 20000}.
 {end_port, 50000}.
 {handler, jingle_handler}.
-
+}}}
 ===6) Running===
 
 ./start.sh
