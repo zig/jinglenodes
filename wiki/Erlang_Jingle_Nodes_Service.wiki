@@ -11,7 +11,7 @@ This Tutorial provides a step-by-step how to add Jingle Nodes Services to your X
 
 = Procedures =
 
-== Configuring ejabberd ==
+===1) Configuring ejabberd ===
 
 Append your ejabberd.cfg file:
 
@@ -29,7 +29,7 @@ Append your ejabberd.cfg file:
                            ]},
 }}}
 
-2) Install exmpp
+===2) Install exmpp===
 
 svn co http://svn.process-one.net/exmpp/trunk exmpp-trunk
 
@@ -40,18 +40,18 @@ autoreconf -vif
 ./configure
 make install
 
-3) Checking Out Jingle Services API Code
+===3) Checking Out Jingle Services API Code===
 
 # Non-members may check out a read-only working copy anonymously over HTTP.
 svn checkout http://jinglenodes.googlecode.com/svn/trunk/jnsapi_erlang jnsapi_erlang 
 
 Extra details and SVN Source Browse: Jingle Nodes Source
 
-4) Building
+===4) Building===
 
 ~/jnsapi_erlang$ make all
 
-5) Configuring: jn_component.cfg
+===5) Configuring: jn_component.cfg===
 
 {jid, "jn.localhost"}.
 {server, "localhost"}.
@@ -66,6 +66,6 @@ Extra details and SVN Source Browse: Jingle Nodes Source
 {end_port, 50000}.
 {handler, jingle_handler}.
 
-6) Running
+===6) Running===
 
 ./start.sh
