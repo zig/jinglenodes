@@ -29,9 +29,43 @@ Append your ejabberd.cfg file:
                            ]},
 }}}
 
-= Details =
+2) Install exmpp
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+svn co http://svn.process-one.net/exmpp/trunk exmpp-trunk
+
+Run:
+autoconf
+
+autoreconf -vif
+./configure
+make install
+
+3) Checking Out Jingle Services API Code
+
+# Non-members may check out a read-only working copy anonymously over HTTP.
+svn checkout http://jinglenodes.googlecode.com/svn/trunk/jnsapi_erlang jnsapi_erlang 
+
+Extra details and SVN Source Browse: Jingle Nodes Source
+
+4) Building
+
+~/jnsapi_erlang$ make all
+
+5) Configuring: jn_component.cfg
+
+{jid, "jn.localhost"}.
+{server, "localhost"}.
+{port, 8888}.
+{pass,"secret"}.
+{public_ip, "89.100.102.102"}.
+{whitelist, "localhost"}.
+{channel_timeout,60000}.
+{max_per_period, 10}.
+{period_seconds, 6}.
+{init_port, 20000}.
+{end_port, 50000}.
+{handler, jingle_handler}.
+
+6) Running
+
+./start.sh
