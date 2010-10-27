@@ -34,22 +34,28 @@ Append your ejabberd.cfg file:
 svn co http://svn.process-one.net/exmpp/trunk exmpp-trunk
 
 Run:
+{{{
 autoconf
 
 autoreconf -vif
+
 ./configure
+
 make install
+}}}
 
 ===3) Checking Out Jingle Services API Code===
 
 # Non-members may check out a read-only working copy anonymously over HTTP.
+{{{
 svn checkout http://jinglenodes.googlecode.com/svn/trunk/jnsapi_erlang jnsapi_erlang 
+}}}
 
 Extra details and SVN Source Browse: Jingle Nodes Source
 
 ===4) Building===
 
-~/jnsapi_erlang$ make all
+~/jnsapi_erlang$ make
 
 ===5) Configuring: jn_component.cfg===
 
