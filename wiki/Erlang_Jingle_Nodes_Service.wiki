@@ -31,7 +31,7 @@ Append your ejabberd.cfg file:
 
 ===2) Install exmpp===
 
-svn co http://svn.process-one.net/exmpp/trunk exmpp-trunk
+git clone https://github.com/processone/exmpp.git
 
 Run:
 {{{
